@@ -29,11 +29,7 @@ Reports:
 2) Parents want to know the size of the schools, since they want their daughters to be noticed. 
    Show a list of each school’s number of students, from greatest to lowest. 
 3) I want to know which schools are financially secure.  
-     A) What is the total of the tuition money coming in per school? 
-     B)How does this compare to the school’s yearly budget? Show me a column for the schools that have more money coming in than spent, and for those that are in debt since their budget is more than their tuition 
-     C)Is the school’s budget increasing or decreasing by the year? 
-     D)Show me the two schools that seem to be the most secure based on this data 
-
+   What is the total of the tuition money coming in per school? 
  
 
 Sample data is in this order: Name of the school, address, phone number, principal name, each grade with the number of girls in it from 9th to 12th, tuition charged, discounted tuition, percentage of parents paying full tuition, connected to an elementary school, yearly budget  
