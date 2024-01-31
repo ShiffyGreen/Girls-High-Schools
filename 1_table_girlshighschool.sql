@@ -28,10 +28,10 @@ create table dbo.GirlsHighSchools
         constraint ck_DiscountedTuition_positive check (DiscountedTuition > 0),
     PercentagePayingFull int not null 
         constraint ck_percentage_paying_full_between_0_and_100 check (PercentagePayingFull between 0 and 100),
-    ConnectedToElementary bit default 'no',
+    ConnectedToElementary bit not null default 0,
     YearlyBudget decimal (20, 2) not null
     constraint ck_school_budget_positive check (YearlyBudget > 0),
-    TotalStudentBody as isnull ((NumOfFreshies + NumOfSophies+ NumOfJuniors + NumOfSeniors), 0),
+    TotalStudentBody as  (NumOfFreshies + isnull (NumOfSophies, 0)+ isnull (NumOfJuniors, 0) + isnull (NumOfSeniors, 0)),
     GrowingOrShrinking as case 
     when NumOfFreshies < NumOfSophies and NumOfSophies < NumOfJuniors  and NumOfJuniors < NumOfSeniors
     then 'shrinking'

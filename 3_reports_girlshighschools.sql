@@ -3,7 +3,7 @@ go
 --1)
 select * 
 from GirlsHighSchools g
-where g.ConnectedToElementary = 'yes'
+where g.ConnectedToElementary = 0
 
 --2)
 select g.TotalStudentBody 
